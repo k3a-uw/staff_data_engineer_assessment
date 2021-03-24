@@ -1,0 +1,15 @@
+file_type: "csv"
+file_name: "clinician data.csv"
+header_row: "true"
+skip_rows: 4
+expected_cols:
+  - "ID"
+  - "provider first"
+  - "provider last"
+  - "email address"
+  - "Sex"
+  - "Care Center Name"
+  - "primary language"
+  - "NPI"
+  - "title"
+  - "updated_date"

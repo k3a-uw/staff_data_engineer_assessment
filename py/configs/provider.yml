@@ -1,0 +1,14 @@
+file_type: "csv"
+file_name: "providers.csv"
+header_row: "true"
+skip_rows: 4
+expected_cols:
+  - "id"
+  - "first name"
+  - "last_name"
+  - "email"
+  - "gender"
+  - "Care Center"
+  - "languages"
+  - "NPI"
+  - "title"

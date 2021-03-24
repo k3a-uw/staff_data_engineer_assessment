@@ -1,0 +1,16 @@
+version: "3.2"
+
+services:
+  db:
+    build:
+      dockerfile: Dockerfile
+      context: ./db
+    ports:
+      - "5432:5432"
+    container_name: "lifestance_psql"
+  py:
+    build:
+      dockerfile: Dockerfile
+      context: ./py
+    container_name: "lifestance_py38"
+    tty: true  # KEEPS THE PYTHON CONTAINER ALIVE
