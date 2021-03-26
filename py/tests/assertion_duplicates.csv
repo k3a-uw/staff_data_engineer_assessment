@@ -1,0 +1,10 @@
+given_name,sur_name,email_address,gender,care_center_name,languages,npi,title
+Unique,Record,fduffy0@skype.com,Polygender,Topicware,Danish,2469262,Dr
+CompleteDup,CompleteDup,krouth1@photobucket.com,Genderfluid,Gabtune,Mongolian,5379928,Dr
+DupAfterHyphen,Gurton,kgurton2@walmart.com,Non-binary,Yombu,Malayalam,9586334,Dr
+DupCrossingTitle,ThisShouldPrevail,denstone5@edublogs.org,Bigender,Lazzy,Arabic,8712926,Dr
+DupAcrossFile,Croneen,mcroneen6@npr.org,Genderqueer,Omba,Tok Pisin,1124636,Dr
+Unique,Godon,kgodon8@posterous.com,Female,Zoovu,Bulgarian,0163851,Dr
+CompleteDup,Porcas,aporcas0@quantcast.com,Genderqueer,Tagpad,Quechua,5785223,Dr
+DupWithNPIRecord1,Capps,acapps2@twitter.com,Female,Abata,Malagasy,0472610,Dr
+UniqueLeave,Swendell,jswendell4@homestead.com,Female,Ailane,Norwegian,2332292,Dr

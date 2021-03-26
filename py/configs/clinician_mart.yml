@@ -1,0 +1,60 @@
+file_type: "csv"
+target_prefix: "clinician_mart"
+build_type: "union"
+stage_folder: "./data/bronze"
+mart_folder: "./data/silver"
+
+source_names:
+  - "clinicians"
+  - "providers"
+
+target_cols:
+  - name: "given_name"
+    unique: false
+    source_cols:
+      clinicians: "provider first"
+      providers: "first name"
+  - name: "sur_name"
+    unique: false
+    source_cols:
+      clinicians: "provider last"
+      providers: "last_name"
+  - name: "email_address"
+    unique: false
+    source_cols:
+      clinicians: "email address"
+      providers: "email"
+  - name: "gender"
+    unique: false
+    source_cols:
+      clinicians: "Sex"
+      providers: "gender"
+  - name: "care_center_name"
+    unique: false
+    source_cols:
+      clinicians: "Care Center Name"
+      providers: "Care Center"
+  - name: "languages"
+    unique: false
+    source_cols:
+      clinicians: "primary language"
+      providers: "languages"
+  - name: "npi"
+    unique: true
+    source_cols:
+      clinicians: "NPI"
+      providers: "NPI"
+  - name: "title"
+    unique: false
+    transform:
+      inclusive-filter:
+        - 'Dr'
+    source_cols:
+      clinicians: "title"
+      providers: "title"
+
+standard_transforms:
+  inclusive_filters:
+    - column: "title"
+      values:
+        - 'Dr'

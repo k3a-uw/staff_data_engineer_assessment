@@ -32,11 +32,17 @@ This project takes advantage of `make` to make interacting with building and tes
 * `make stop` - spins down the docker containers using docker-compose down
 * `make db_connect` - launches an interactive console directly connected to postgres
 * `make db_bash` - launches an interactive session with the postgres docker container at /bin/bash
-* `make db_test` - executes the test_person_match.sql on the postgres datbase.
-
+* `make db_test` - executes the test_person_match.sql on the postgres database.
+* `make py_bash` - launches an interactive session with the python3.8 docker.
+* `make py_test` - launches the unit tests using pytests and integration/file based tests using exec
+* `make full_test` - launches `db_test` then `py_test` so tests can be done in a single command.
+ 
 ## Using your IDE
 If desired, after `make build` or `make start` the PostgeSQL database will be running on port 5432 on localhost.  You can connect to it from any IDE of your
 choosing to interact with the database:
     `postgresql://localhost:5432/postgres`
+
+## Testing
+To test, you need to only build the containers using `make build` and then choose the tests to run, either `make db_test` or `make py_test`
 
 
